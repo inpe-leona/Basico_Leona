@@ -1,7 +1,8 @@
 package br.leona.server.model;
 
 import java.io.Serializable;
-import java.sql.Date;
+//import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,8 +18,10 @@ public class Observacao implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
-    private Date dataHoraInicio; 
-    private Date dataHoraFim; 
+    /*private Date dataHoraInicio; 
+    private Date dataHoraFim; */
+    private String dataHoraInicio; 
+    private String dataHoraFim;
     private String Estacoes; 
     private String Observadores; 
     private String totalElts; 
@@ -39,7 +42,22 @@ public class Observacao implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    public String getDataHoraInicio() {
+        return dataHoraInicio;
+    }
 
+    public void setDataHoraInicio(String dataHoraInicio) {        
+        this.dataHoraInicio = dataHoraInicio;
+    }
+
+    public String getDataHoraFim() {
+        return dataHoraFim;
+    }
+
+    public void setDataHoraFim(String dataHoraFim) {
+        this.dataHoraFim = dataHoraFim;
+    }
+/*
     public Date getDataHoraInicio() {
         return dataHoraInicio;
     }
@@ -55,7 +73,7 @@ public class Observacao implements Serializable {
     public void setDataHoraFim(Date dataHoraFim) {
         this.dataHoraFim = dataHoraFim;
     }
-
+*/
     public String getEstacoes() {
         return Estacoes;
     }
